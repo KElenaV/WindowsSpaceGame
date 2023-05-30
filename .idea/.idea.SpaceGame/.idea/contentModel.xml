@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\AlexeyKazakoff\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\AlexeyKazakoff\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SpaceGame.772709402.00" t="ExcludeRecursive" />
+    <e p="D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SpaceGame" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Components" t="Include">
+          <e p="Component.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="SpriteRenderer.cs" t="Include" />
+        </e>
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="GameObject.cs" t="Include" />
+        <e p="GameWorld.cs" t="Include" />
+        <e p="Keyboard.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="SpaceGame.csproj" t="IncludeRecursive" />
+        <e p="Sprites" t="Include">
+          <e p="enemy_01.png" t="Include" />
+          <e p="player.png" t="Include" />
+        </e>
+        <e p="Time.cs" t="Include" />
+        <e p="Transform.cs" t="Include" />
+      </e>
+      <e p="SpaceGame.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

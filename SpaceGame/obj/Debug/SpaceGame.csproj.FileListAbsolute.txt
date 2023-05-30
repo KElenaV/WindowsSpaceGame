@@ -1,0 +1,12 @@
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.AssemblyReference.cache
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\SpaceGame.Form1.resources
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\SpaceGame.Properties.Resources.resources
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.GenerateResource.cache
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.CoreCompileInputs.cache
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\Sprites\player.png
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\@.exe.config
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\@.exe
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\@.pdb
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\@.exe
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\@.pdb
+C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\Sprites\enemy_01.png
