@@ -15,6 +15,7 @@ namespace SpaceGame.Components
         }
 
         public float ScaleFactor { get; set; } = 1;
+        public Image Sprite => _sprite;
 
         public RectangleF Rectangle => new RectangleF(
             GameObject.Transform.Position.X, GameObject.Transform.Position.Y, _sprite.Width * ScaleFactor, _sprite.Height * ScaleFactor);

@@ -11,50 +11,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93A8F821-84B4-439C-A5AB-FF025375FE32/94/182366f1/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1AF41839-925B-4409-B823-837D7B5F29D6/f2/9a126ebc/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1AF41839-925B-4409-B823-837D7B5F29D6/93/781c4cb1/Pen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SpaceGame/Keyboard.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Time.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameWorld.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Component.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Collider.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/GameWorld.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/GameObject.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/Components/SpriteRenderer.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Laser.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Enemy.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameObject.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Components/SpriteRenderer.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Player.cs" />
       </list>
     </option>
@@ -103,6 +75,7 @@
       <workItem from="1685674933460" duration="1000" />
       <workItem from="1685675023196" duration="2070000" />
       <workItem from="1685677289673" duration="4625000" />
+      <workItem from="1685729336571" duration="7216000" />
     </task>
     <servers />
   </component>
@@ -110,22 +83,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1344" height="113" key="GridCell.Tab.0.bottom" timestamp="1685682786846">
+    <state width="1344" height="125" key="GridCell.Tab.0.bottom" timestamp="1685740656838">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1344" height="113" key="GridCell.Tab.0.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685682786846" />
-    <state width="1344" height="113" key="GridCell.Tab.0.center" timestamp="1685682786846">
+    <state width="1344" height="125" key="GridCell.Tab.0.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685740656838" />
+    <state width="1344" height="125" key="GridCell.Tab.0.center" timestamp="1685740656838">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1344" height="113" key="GridCell.Tab.0.center/0.0.1500.952@0.0.1500.952" timestamp="1685682786846" />
-    <state width="1344" height="113" key="GridCell.Tab.0.left" timestamp="1685682786846">
+    <state width="1344" height="125" key="GridCell.Tab.0.center/0.0.1500.952@0.0.1500.952" timestamp="1685740656838" />
+    <state width="1344" height="125" key="GridCell.Tab.0.left" timestamp="1685740656838">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1344" height="113" key="GridCell.Tab.0.left/0.0.1500.952@0.0.1500.952" timestamp="1685682786846" />
-    <state width="1344" height="113" key="GridCell.Tab.0.right" timestamp="1685682786846">
+    <state width="1344" height="125" key="GridCell.Tab.0.left/0.0.1500.952@0.0.1500.952" timestamp="1685740656838" />
+    <state width="1344" height="125" key="GridCell.Tab.0.right" timestamp="1685740656838">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1344" height="113" key="GridCell.Tab.0.right/0.0.1500.952@0.0.1500.952" timestamp="1685682786846" />
+    <state width="1344" height="125" key="GridCell.Tab.0.right/0.0.1500.952@0.0.1500.952" timestamp="1685740656838" />
     <state width="1344" height="321" key="GridCell.Tab.1.bottom" timestamp="1685665994322">
       <screen x="0" y="0" width="1500" height="952" />
     </state>

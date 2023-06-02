@@ -23,6 +23,8 @@ namespace SpaceGame.Components
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("enemy_01");
             _spriteRenderer.ScaleFactor = 0.5f;
+            
+            Respawn();
         }
 
         public override void Update()
@@ -35,8 +37,9 @@ namespace SpaceGame.Components
         {
             if (other.GameObject.Tag == "Laser")
             {
-                GameWorld.Destroy(other.GameObject);
-                GameWorld.Destroy(GameObject);
+                other.GameObject.Destroy();
+                //GameWorld.Destroy(GameObject);
+                Respawn();
             }
         }
 

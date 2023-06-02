@@ -34,14 +34,6 @@ namespace SpaceGame
 
         public void Update()
         {
-            //    if (Keyboard.IsKeyDown(Keys.D))
-            //        _position.X += 1;
-            //    if (Keyboard.IsKeyDown(Keys.A))
-            //        _position.X -= 1;
-            //    if (Keyboard.IsKeyDown(Keys.W))
-            //        _position.Y -= 1;
-            //    if (Keyboard.IsKeyDown(Keys.S))
-            //        _position.Y += 1;
             foreach (var component in _components.Values)
             {
                 if(component.IsEnabled)
@@ -58,6 +50,16 @@ namespace SpaceGame
         {
             _components.Add(component.ToString(), component);
             component.GameObject = this;
+        }
+
+        public void Destroy()
+        {
+            foreach (var component in _components.Values)
+            {
+                component.Destroy();
+            }
+            
+            GameWorld.Destroy(this);
         }
     }
 }

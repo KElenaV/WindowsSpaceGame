@@ -20,5 +20,10 @@ namespace SpaceGame.Components
         {
 
         }
+
+        public virtual void Destroy()
+        {
+            
+        }
     }
 }

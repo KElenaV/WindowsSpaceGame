@@ -15,7 +15,7 @@ namespace SpaceGame.Components
         {
             GameObject.Tag = ToString();
             
-            _speed = 80;
+            _speed = 100;
             
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("player");
@@ -33,6 +33,8 @@ namespace SpaceGame.Components
             GetInput();
 
             Move();
+            
+            ScreenLimits();
         }
 
         public override string ToString()
@@ -71,12 +73,44 @@ namespace SpaceGame.Components
             GameObject.Transform.Translate(_velocity * _speed * Time.DeltaTime);
         }
 
+        private void ScreenLimits()
+        {
+            float xPosition = GameObject.Transform.Position.X;
+            float yPosition = GameObject.Transform.Position.Y;
+            
+            VerticalLimits(xPosition, yPosition);
+            
+            HorizontalLimits(xPosition, yPosition);
+        }
+
+        private void VerticalLimits(float xPosition, float yPosition)
+        {
+            float minPositionY = 20;
+            float maxPositionY = GameWorld.WorldSize.Height - _spriteRenderer.Sprite.Height;
+            
+            if(yPosition < minPositionY)
+                GameObject.Transform.Position = new Vector2(xPosition, minPositionY);
+            if (yPosition > maxPositionY) 
+                GameObject.Transform.Position = new Vector2(xPosition, maxPositionY);
+        }
+
+        private void HorizontalLimits(float xPosition, float yPosition)
+        {
+            float minPositionX = -_spriteRenderer.Sprite.Width;
+            float maxPositionX = GameWorld.WorldSize.Width;
+            
+            if(xPosition < minPositionX)
+                GameObject.Transform.Position = new Vector2(maxPositionX, yPosition);
+            if(xPosition > maxPositionX)
+                GameObject.Transform.Position = new Vector2(minPositionX, yPosition);
+        }
+
         private void Shoot()
         {
             GameObject laser = new GameObject();
             laser.AddComponent(new SpriteRenderer());
             laser.AddComponent(new Collider());
-            Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 2, GameObject.Transform.Position.Y - _spriteRenderer.Rectangle.Height - 15);
+            Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 4, GameObject.Transform.Position.Y - 20);
             laser.AddComponent(new Laser("laser", new Vector2(0,-1), laserPosition));
             GameWorld.Instantiate(laser);
         }

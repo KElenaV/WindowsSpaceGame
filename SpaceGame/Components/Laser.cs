@@ -28,7 +28,6 @@ namespace SpaceGame.Components
             
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite(_spriteName);
-            _spriteRenderer.ScaleFactor = 0.4f;
 
         }
 
@@ -37,7 +36,7 @@ namespace SpaceGame.Components
             Move();
             
             if(_spriteRenderer.OnBecameInvisible())
-                GameWorld.Destroy(GameObject);
+                GameObject.Destroy();
         }
 
         public override string ToString()
@@ -49,7 +48,5 @@ namespace SpaceGame.Components
         {
             GameObject.Transform.Translate(_direction * _speed * Time.DeltaTime);
         }
-        
-        
     }
 }

@@ -43,5 +43,10 @@ namespace SpaceGame.Components
         {
             return "Collider";
         }
+
+        public override void Destroy()
+        {
+            _colliders.Remove(this);
+        }
     }
 }
