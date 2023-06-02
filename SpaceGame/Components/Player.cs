@@ -13,7 +13,10 @@ namespace SpaceGame.Components
 
         public override void Awake()
         {
+            GameObject.Tag = ToString();
+            
             _speed = 80;
+            
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("player");
             _spriteRenderer.ScaleFactor = 0.7f;
@@ -72,6 +75,7 @@ namespace SpaceGame.Components
         {
             GameObject laser = new GameObject();
             laser.AddComponent(new SpriteRenderer());
+            laser.AddComponent(new Collider());
             Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 2, GameObject.Transform.Position.Y - _spriteRenderer.Rectangle.Height - 15);
             laser.AddComponent(new Laser("laser", new Vector2(0,-1), laserPosition));
             GameWorld.Instantiate(laser);

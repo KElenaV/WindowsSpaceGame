@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Numerics;
 
 namespace SpaceGame.Components
@@ -7,11 +8,18 @@ namespace SpaceGame.Components
     {
         private static readonly Random Random = new Random();
         private SpriteRenderer _spriteRenderer;
+        private Collider _collider;
         private float _speed;
 
         public override void Awake()
         {
+            GameObject.Tag = ToString();
+            
             _speed = 100;
+
+            _collider = (Collider)GameObject.GetComponent("Collider");
+            _collider.CollisionHandler += Collision;
+            
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("enemy_01");
             _spriteRenderer.ScaleFactor = 0.5f;
@@ -21,6 +29,15 @@ namespace SpaceGame.Components
         {
             Move();
             ScreenBounds();
+        }
+
+        private void Collision(Collider other)
+        {
+            if (other.GameObject.Tag == "Laser")
+            {
+                GameWorld.Destroy(other.GameObject);
+                GameWorld.Destroy(GameObject);
+            }
         }
 
         private void Move()

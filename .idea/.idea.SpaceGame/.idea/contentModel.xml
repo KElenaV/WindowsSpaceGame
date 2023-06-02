@@ -9,6 +9,7 @@
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Components" t="Include">
+          <e p="Collider.cs" t="Include" />
           <e p="Component.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="Laser.cs" t="Include" />

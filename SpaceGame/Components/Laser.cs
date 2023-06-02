@@ -20,6 +20,8 @@ namespace SpaceGame.Components
 
         public override void Awake()
         {
+            GameObject.Tag = ToString();
+            
             _speed = 300;
 
             GameObject.Transform.Position = _startPosition;
@@ -38,9 +40,16 @@ namespace SpaceGame.Components
                 GameWorld.Destroy(GameObject);
         }
 
+        public override string ToString()
+        {
+            return "Laser";
+        }
+
         private void Move()
         {
             GameObject.Transform.Translate(_direction * _speed * Time.DeltaTime);
         }
+        
+        
     }
 }

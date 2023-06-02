@@ -13,6 +13,7 @@ namespace SpaceGame
         }
 
         public Transform Transform { get; private set; }
+        public string Tag { get; set; }
 
         public void Awake()
         {

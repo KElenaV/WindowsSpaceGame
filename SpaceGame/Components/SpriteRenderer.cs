@@ -22,6 +22,9 @@ namespace SpaceGame.Components
         public override void Update()
         {
             _graphics.DrawImage(_sprite, Rectangle);
+            
+            if(GameWorld.Debug)
+                _graphics.DrawRectangle(new Pen(Color.Yellow, 0.5f), new Rectangle((int)Rectangle.X, (int)Rectangle.Y, (int)Rectangle.Width, (int)Rectangle.Height));
         }
 
         public void SetSprite(string spriteName)

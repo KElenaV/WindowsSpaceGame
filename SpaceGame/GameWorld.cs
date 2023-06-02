@@ -22,6 +22,7 @@ namespace SpaceGame
 
         public static Size WorldSize { get; private set; }
         public static Graphics Graphics { get; private set; }
+        public static bool Debug { get; set; } = true;
 
         public void Initialize()
         {
@@ -78,11 +79,13 @@ namespace SpaceGame
             GameObject player = new GameObject();
             player.AddComponent(new SpriteRenderer());
             player.AddComponent(new Player());
+            player.AddComponent(new Collider());
             _gameObjects.Add(player);
 
             GameObject enemy = new GameObject();
             enemy.AddComponent(new SpriteRenderer());
             enemy.AddComponent(new Enemy());
+            enemy.AddComponent(new Collider());
             _gameObjects.Add(enemy);
         }
     }
