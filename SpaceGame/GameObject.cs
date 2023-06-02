@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SpaceGame
 {
-    class GameObject
+    public  class GameObject
     {
         private Dictionary<string, Component> _components = new Dictionary<string, Component>();
 

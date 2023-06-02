@@ -8,7 +8,7 @@ namespace SpaceGame
     {
         private BufferedGraphics _backBuffer;
         private Color _backgroundColor;
-        private List<GameObject> _gameObjects = new List<GameObject>();
+        private static List<GameObject> _gameObjects = new List<GameObject>();
 
         public GameWorld(Rectangle displayRectangle, Graphics graphics)
         {
@@ -33,17 +33,17 @@ namespace SpaceGame
 
         public void Awake()
         {
-            foreach (GameObject gameObject in _gameObjects)
+            for (int i = 0; i < _gameObjects.Count; i++)
             {
-                gameObject.Awake();
+                _gameObjects[i].Awake();
             }
         }
 
         public void Start()
         {
-            foreach(GameObject gameObject in _gameObjects)
+            for (int i = 0; i < _gameObjects.Count; i++)
             {
-                gameObject.Start();
+                _gameObjects[i].Start();
             }
         }
 
@@ -53,12 +53,24 @@ namespace SpaceGame
 
             Graphics.Clear(_backgroundColor);
 
-            foreach(GameObject gameObject in _gameObjects)
+            for (int i = 0; i < _gameObjects.Count; i++)
             {
-                gameObject.Update();
+                _gameObjects[i].Update();
             }
 
             _backBuffer.Render();
+        }
+
+        public static void Instantiate(GameObject gameObject)
+        {
+            gameObject.Awake();
+            gameObject.Start();
+            _gameObjects.Add(gameObject);
+        }
+
+        public static void Destroy(GameObject gameObject)
+        {
+            _gameObjects.Remove(gameObject);
         }
 
         private void CreateGameObjects()

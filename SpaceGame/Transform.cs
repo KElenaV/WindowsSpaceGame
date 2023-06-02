@@ -2,7 +2,7 @@
 
 namespace SpaceGame
 {
-    class Transform
+    public class Transform
     {
         public Vector2 Position { get; set; }
 

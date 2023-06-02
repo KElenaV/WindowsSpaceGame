@@ -10,3 +10,16 @@ C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\@.pdb
 C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\@.exe
 C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\obj\Debug\@.pdb
 C:\Users\AlexeyKazakoff\source\repos\SpaceGame\SpaceGame\bin\Debug\Sprites\enemy_01.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\enemy_01.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\player.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\@.exe.config
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\@.exe
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\@.pdb
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.AssemblyReference.cache
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.Form1.resources
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.Properties.Resources.resources
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.GenerateResource.cache
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.csproj.CoreCompileInputs.cache
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\@.exe
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\@.pdb
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\laser.png

@@ -1,7 +1,7 @@
 ﻿
 namespace SpaceGame.Components
 {
-    abstract class Component
+    abstract public class Component
     {
         public GameObject GameObject { get; set; }
         public bool IsEnabled { get; set; } = true;

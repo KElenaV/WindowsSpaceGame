@@ -10,14 +10,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93A8F821-84B4-439C-A5AB-FF025375FE32/94/182366f1/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1AF41839-925B-4409-B823-837D7B5F29D6/f2/9a126ebc/Image.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SpaceGame/Components/Enemy.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/Components/Player.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/GameObject.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Keyboard.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Time.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Components/Component.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameObject.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Components/Laser.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Components/SpriteRenderer.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Components/Player.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameWorld.cs" />
       </list>
     </option>
   </component>
@@ -27,6 +35,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35034272" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30007616" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -58,11 +68,94 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685475349946</updated>
-      <workItem from="1685475356844" duration="365000" />
+      <workItem from="1685475356844" duration="11057000" />
+      <workItem from="1685674933460" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1344" height="237" key="GridCell.Tab.0.bottom" timestamp="1685665994329">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="237" key="GridCell.Tab.0.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685665994329" />
+    <state width="1344" height="237" key="GridCell.Tab.0.center" timestamp="1685665994327">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="237" key="GridCell.Tab.0.center/0.0.1500.952@0.0.1500.952" timestamp="1685665994327" />
+    <state width="1344" height="237" key="GridCell.Tab.0.left" timestamp="1685665994327">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="237" key="GridCell.Tab.0.left/0.0.1500.952@0.0.1500.952" timestamp="1685665994327" />
+    <state width="1344" height="237" key="GridCell.Tab.0.right" timestamp="1685665994329">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="237" key="GridCell.Tab.0.right/0.0.1500.952@0.0.1500.952" timestamp="1685665994329" />
+    <state width="1344" height="321" key="GridCell.Tab.1.bottom" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.1.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.1.center" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.1.center/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.1.left" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.1.left/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.1.right" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.1.right/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.2.bottom" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.2.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.2.center" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.2.center/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.2.left" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.2.left/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.2.right" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.2.right/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.3.bottom" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.3.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.3.center" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.3.center/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.3.left" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.3.left/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.3.right" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.3.right/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.4.bottom" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.4.bottom/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.4.center" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.4.center/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.4.left" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.4.left/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
+    <state width="1344" height="321" key="GridCell.Tab.4.right" timestamp="1685665994322">
+      <screen x="0" y="0" width="1500" height="952" />
+    </state>
+    <state width="1344" height="321" key="GridCell.Tab.4.right/0.0.1500.952@0.0.1500.952" timestamp="1685665994322" />
   </component>
 </project>

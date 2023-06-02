@@ -1,11 +1,13 @@
 ﻿using System.Drawing;
+using System.Numerics;
 
 namespace SpaceGame.Components
 {
     class SpriteRenderer : Component
     {
-        private Graphics _graphics;
+        private readonly Graphics _graphics;
         private Image _sprite;
+        private bool _isVisible;
 
         public SpriteRenderer()
         {
@@ -32,5 +34,22 @@ namespace SpaceGame.Components
             return "SpriteRenderer";
         }
 
+        public bool OnBecameInvisible()
+        {
+            if (_isVisible)
+            {
+                if (GameObject.Transform.Position.X > GameWorld.WorldSize.Width
+                    || GameObject.Transform.Position.X < Rectangle.Width
+                    || GameObject.Transform.Position.Y > GameWorld.WorldSize.Height
+                    || GameObject.Transform.Position.Y < -Rectangle.Height)
+                {
+                    _isVisible = false;
+                    return true;
+                }
+            }
+
+            _isVisible = true;
+            return false;
+        }
     }
 }
