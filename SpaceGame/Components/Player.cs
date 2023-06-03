@@ -108,7 +108,7 @@ namespace SpaceGame.Components
         private void Shoot()
         {
             GameObject laser = new GameObject();
-            laser.AddComponent(new SpriteRenderer());
+            laser.AddComponent(new SpriteRenderer(1));
             laser.AddComponent(new Collider());
             Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 4, GameObject.Transform.Position.Y - 20);
             laser.AddComponent(new Laser("laser", new Vector2(0,-1), laserPosition));

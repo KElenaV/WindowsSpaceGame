@@ -9,6 +9,7 @@
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Components" t="Include">
+          <e p="Background.cs" t="Include" />
           <e p="Collider.cs" t="Include" />
           <e p="Component.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
@@ -33,6 +34,9 @@
         </e>
         <e p="SpaceGame.csproj" t="IncludeRecursive" />
         <e p="Sprites" t="Include">
+          <e p="BG1.png" t="Include" />
+          <e p="BG2.png" t="Include" />
+          <e p="BG3.png" t="Include" />
           <e p="enemy_01.png" t="Include" />
           <e p="laser.png" t="Include" />
           <e p="player.png" t="Include" />

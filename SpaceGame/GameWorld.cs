@@ -1,6 +1,7 @@
 ﻿using SpaceGame.Components;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Numerics;
 
 namespace SpaceGame
 {
@@ -22,12 +23,14 @@ namespace SpaceGame
 
         public static Size WorldSize { get; private set; }
         public static Graphics Graphics { get; private set; }
-        public static bool Debug { get; set; } = true;
+        public static bool Debug { get; set; } = false;
 
         public void Initialize()
         {
             CreateGameObjects();
 
+            _gameObjects.Sort();
+            
             Awake();
             Start();
         }
@@ -67,6 +70,7 @@ namespace SpaceGame
             gameObject.Awake();
             gameObject.Start();
             _gameObjects.Add(gameObject);
+            _gameObjects.Sort();
         }
 
         public static void Destroy(GameObject gameObject)
@@ -76,14 +80,19 @@ namespace SpaceGame
 
         private void CreateGameObjects()
         {
+            GameObject background = new GameObject();
+            background.AddComponent(new Background("BG1", Vector2.Zero));
+            background.AddComponent(new SpriteRenderer());
+            _gameObjects.Add(background);
+            
             GameObject player = new GameObject();
-            player.AddComponent(new SpriteRenderer());
+            player.AddComponent(new SpriteRenderer(2));
             player.AddComponent(new Player());
             player.AddComponent(new Collider());
             _gameObjects.Add(player);
 
             GameObject enemy = new GameObject();
-            enemy.AddComponent(new SpriteRenderer());
+            enemy.AddComponent(new SpriteRenderer(1));
             enemy.AddComponent(new Enemy());
             enemy.AddComponent(new Collider());
             _gameObjects.Add(enemy);

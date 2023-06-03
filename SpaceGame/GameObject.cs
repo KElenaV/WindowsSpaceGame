@@ -1,9 +1,10 @@
-﻿using SpaceGame.Components;
+﻿using System;
+using SpaceGame.Components;
 using System.Collections.Generic;
 
 namespace SpaceGame
 {
-    public  class GameObject
+    public  class GameObject : IComparable<GameObject>
     {
         private Dictionary<string, Component> _components = new Dictionary<string, Component>();
 
@@ -43,7 +44,10 @@ namespace SpaceGame
 
         public Component GetComponent(string componentName)
         {
-            return _components[componentName];
+            if(_components.ContainsKey(componentName))
+                return _components[componentName];
+
+            return null;
         }
 
         public void AddComponent(Component component)
@@ -60,6 +64,26 @@ namespace SpaceGame
             }
             
             GameWorld.Destroy(this);
+        }
+
+        public int CompareTo(GameObject other)
+        {
+            SpriteRenderer otherRenderer = (SpriteRenderer) other.GetComponent("SpriteRenderer");
+            SpriteRenderer renderer = (SpriteRenderer) GetComponent("SpriteRenderer");
+
+            if (otherRenderer != null && renderer != null)
+            {
+                if (renderer.SortOrder > otherRenderer.SortOrder)
+                    return 1;
+                else if (renderer.SortOrder < otherRenderer.SortOrder)
+                    return -1;
+
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }

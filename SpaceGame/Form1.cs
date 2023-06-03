@@ -10,7 +10,7 @@ namespace SpaceGame
         public Form1()
         {
             InitializeComponent();
-
+            SetClientSizeCore(1024, 768);
             _gameWorld = new GameWorld(DisplayRectangle, CreateGraphics());
         }
 

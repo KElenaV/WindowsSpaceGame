@@ -23,3 +23,6 @@ D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\SpaceGame.csp
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\@.exe
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\obj\Debug\@.pdb
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\laser.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG1.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG2.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG3.png
