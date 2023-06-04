@@ -80,10 +80,31 @@ namespace SpaceGame
 
         private void CreateGameObjects()
         {
-            GameObject background = new GameObject();
-            background.AddComponent(new Background("BG1", Vector2.Zero));
-            background.AddComponent(new SpriteRenderer());
-            _gameObjects.Add(background);
+            GameObject background1 = new GameObject();
+            GameObject background2 = new GameObject();
+            GameObject background3 = new GameObject();
+
+            background1.AddComponent(new Background("BG1", Vector2.Zero, 20, background3.Transform));
+            background1.AddComponent(new SpriteRenderer());
+            _gameObjects.Add(background1);
+            
+            background2.AddComponent(new Background("BG2", new Vector2(0, -768), 20, background1.Transform));
+            background2.AddComponent(new SpriteRenderer());
+            _gameObjects.Add(background2);
+            
+            background3.AddComponent(new Background("BG3", new Vector2(0, -1536), 20, background2.Transform));
+            background3.AddComponent(new SpriteRenderer());
+            _gameObjects.Add(background3);
+            
+            GameObject smoke = new GameObject();
+            smoke.AddComponent(new SpriteRenderer());
+            smoke.AddComponent(new BackgroundElement("smoke"));
+            _gameObjects.Add(smoke);
+            
+            GameObject planet = new GameObject();
+            planet.AddComponent(new SpriteRenderer());
+            planet.AddComponent(new BackgroundElement("planet"));
+            _gameObjects.Add(planet);
             
             GameObject player = new GameObject();
             player.AddComponent(new SpriteRenderer(2));

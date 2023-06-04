@@ -26,3 +26,5 @@ D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\laser
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG1.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG2.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\BG3.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\planet.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\smoke.png

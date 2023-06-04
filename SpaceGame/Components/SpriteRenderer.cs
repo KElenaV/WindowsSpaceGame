@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace SpaceGame.Components
 {
-    class SpriteRenderer : Component
+    public class SpriteRenderer : Component
     {
         public Image Sprite;
         public int SortOrder;
