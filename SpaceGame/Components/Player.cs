@@ -6,6 +6,7 @@ namespace SpaceGame.Components
     class Player : Component
     {
         private SpriteRenderer _spriteRenderer;
+        private Animator _animator;
         private Vector2 _velocity;
         private float _speed;
         private float _timer;
@@ -16,10 +17,14 @@ namespace SpaceGame.Components
             GameObject.Tag = ToString();
             
             _speed = 100;
-            
+
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("player");
             _spriteRenderer.ScaleFactor = 0.7f;
+
+            _animator = (Animator)GameObject.GetComponent("Animator");
+            _animator.AddAnimation(new Animation("PlayerFly", 10));
+            _animator.PlayAnimation("PlayerFly");
 
             GameObject.Transform.Position =
                 new Vector2(GameWorld.WorldSize.Width / 2.0f - _spriteRenderer.Rectangle.Width / 2,

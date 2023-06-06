@@ -8,6 +8,7 @@ namespace SpaceGame.Components
     {
         private static readonly Random Random = new Random();
         private SpriteRenderer _spriteRenderer;
+        private Animator _animator;
         private Collider _collider;
         private float _speed;
 
@@ -23,6 +24,10 @@ namespace SpaceGame.Components
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("enemy_01");
             _spriteRenderer.ScaleFactor = 0.5f;
+
+            _animator = (Animator)GameObject.GetComponent("Animator");
+            _animator.AddAnimation(new Animation("EnemyFly", 5));
+            _animator.PlayAnimation("EnemyFly");
             
             Respawn();
         }
@@ -38,7 +43,7 @@ namespace SpaceGame.Components
             if (other.GameObject.Tag == "Laser")
             {
                 other.GameObject.Destroy();
-                //GameWorld.Destroy(GameObject);
+                Explode();
                 Respawn();
             }
         }
@@ -58,6 +63,16 @@ namespace SpaceGame.Components
         {
             int xPosition = Random.Next(0, (int)(GameWorld.WorldSize.Width - _spriteRenderer.Rectangle.Width));
             GameObject.Transform.Position = new Vector2(xPosition, -_spriteRenderer.Rectangle.Height);
+        }
+
+        private void Explode()
+        {
+            GameObject explosion = new GameObject();
+            explosion.AddComponent(new SpriteRenderer());
+            explosion.AddComponent(new Animator());
+            explosion.AddComponent(new Explosion(GameObject.Transform.Position));
+
+            GameWorld.Instantiate(explosion);
         }
     }
 }

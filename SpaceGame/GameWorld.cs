@@ -110,12 +110,14 @@ namespace SpaceGame
             player.AddComponent(new SpriteRenderer(2));
             player.AddComponent(new Player());
             player.AddComponent(new Collider());
+            player.AddComponent(new Animator());
             _gameObjects.Add(player);
 
             GameObject enemy = new GameObject();
             enemy.AddComponent(new SpriteRenderer(1));
             enemy.AddComponent(new Enemy());
             enemy.AddComponent(new Collider());
+            enemy.AddComponent(new Animator());
             _gameObjects.Add(enemy);
         }
     }

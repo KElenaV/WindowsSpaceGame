@@ -6,9 +6,11 @@
     <e p="D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SpaceGame" t="IncludeRecursive">
+        <e p="Animation.cs" t="Include" />
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Components" t="Include">
+          <e p="Animator.cs" t="Include" />
           <e p="Background.cs" t="Include" />
           <e p="BackgroundElement.cs" t="Include" />
           <e p="Collider.cs" t="Include" />
@@ -42,6 +44,20 @@
           <e p="laser.png" t="Include" />
           <e p="planet.png" t="Include" />
           <e p="player.png" t="Include" />
+          <e p="PlayerFly" t="Include">
+            <e p="player02.png" t="Include" />
+            <e p="player03.png" t="Include" />
+            <e p="player04.png" t="Include" />
+            <e p="player05.png" t="Include" />
+            <e p="player06.png" t="Include" />
+            <e p="player07.png" t="Include" />
+            <e p="player08.png" t="Include" />
+            <e p="player09.png" t="Include" />
+            <e p="player10.png" t="Include" />
+            <e p="player11.png" t="Include" />
+            <e p="player12.png" t="Include" />
+            <e p="player13.png" t="Include" />
+          </e>
           <e p="smoke.png" t="Include" />
         </e>
         <e p="Time.cs" t="Include" />
