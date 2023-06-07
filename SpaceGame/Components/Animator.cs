@@ -31,7 +31,7 @@ namespace SpaceGame.Components
                 {
                     _timeElapsed = 0;
                     _currentIndex = 0;
-                    OnAnimationDone(_currentAnimation.Name);
+                    AnimationDoneEvent?.Invoke();
                 }
 
                 _spriteRenderer.Sprite = _currentAnimation.Sprites[_currentIndex];
@@ -55,11 +55,6 @@ namespace SpaceGame.Components
             if (_spriteRenderer != null)
                 _spriteRenderer.Sprite = _currentAnimation.Sprites[0];
 
-        }
-
-        public void OnAnimationDone(string name)
-        {
-            AnimationDoneEvent?.Invoke();
         }
     }
 }

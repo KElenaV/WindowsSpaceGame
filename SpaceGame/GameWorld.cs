@@ -25,9 +25,11 @@ namespace SpaceGame
         public static Graphics Graphics { get; private set; }
         public static bool Debug { get; set; } = false;
 
-        public void Initialize()
+        private void Initialize()
         {
             CreateGameObjects();
+            
+            CreateUIElements();
 
             _gameObjects.Sort();
             
@@ -60,6 +62,11 @@ namespace SpaceGame
             for (int i = 0; i < _gameObjects.Count; i++)
             {
                 _gameObjects[i].Update();
+            }
+            
+            for (int i = 0; i < GameManager.UIElements.Count; i++)
+            {
+                GameManager.UIElements[i].Update();
             }
 
             _backBuffer.Render();
@@ -119,6 +126,18 @@ namespace SpaceGame
             enemy.AddComponent(new Collider());
             enemy.AddComponent(new Animator());
             _gameObjects.Add(enemy);
+        }
+
+        private void CreateUIElements()
+        {
+            int lifes = 3;
+            
+            for (int i = 0; i < lifes; i++)
+            {
+                GameManager.AddLife();
+            }
+
+            
         }
     }
 }

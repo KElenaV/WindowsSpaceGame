@@ -16,6 +16,7 @@
           <e p="Collider.cs" t="Include" />
           <e p="Component.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="Explosion.cs" t="Include" />
           <e p="Laser.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="SpriteRenderer.cs" t="Include" />
@@ -23,6 +24,7 @@
         <e p="Form1.cs" t="Include" />
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
+        <e p="GameManager.cs" t="Include" />
         <e p="GameObject.cs" t="Include" />
         <e p="GameWorld.cs" t="Include" />
         <e p="Keyboard.cs" t="Include" />
@@ -41,6 +43,32 @@
           <e p="BG2.png" t="Include" />
           <e p="BG3.png" t="Include" />
           <e p="enemy_01.png" t="Include" />
+          <e p="EnemyFly" t="Include">
+            <e p="enemy_01_00.png" t="Include" />
+            <e p="enemy_01_01.png" t="Include" />
+            <e p="enemy_01_02.png" t="Include" />
+            <e p="enemy_01_03.png" t="Include" />
+            <e p="enemy_01_04.png" t="Include" />
+            <e p="enemy_01_05.png" t="Include" />
+          </e>
+          <e p="Explosion" t="Include">
+            <e p="Explosion0001.png" t="Include" />
+            <e p="Explosion0002.png" t="Include" />
+            <e p="Explosion0003.png" t="Include" />
+            <e p="Explosion0004.png" t="Include" />
+            <e p="Explosion0005.png" t="Include" />
+            <e p="Explosion0006.png" t="Include" />
+            <e p="Explosion0007.png" t="Include" />
+            <e p="Explosion0008.png" t="Include" />
+            <e p="Explosion0009.png" t="Include" />
+            <e p="Explosion0010.png" t="Include" />
+            <e p="Explosion0011.png" t="Include" />
+            <e p="Explosion0012.png" t="Include" />
+            <e p="Explosion0013.png" t="Include" />
+            <e p="Explosion0014.png" t="Include" />
+            <e p="Explosion0015.png" t="Include" />
+            <e p="Explosion0016.png" t="Include" />
+          </e>
           <e p="laser.png" t="Include" />
           <e p="planet.png" t="Include" />
           <e p="player.png" t="Include" />
