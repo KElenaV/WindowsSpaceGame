@@ -38,6 +38,11 @@ namespace SpaceGame.Components
             ScreenBounds();
         }
 
+        public override string ToString()
+        {
+            return "Enemy";
+        }
+
         private void Collision(Collider other)
         {
             if (other.GameObject.Tag == "Laser")

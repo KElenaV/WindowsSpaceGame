@@ -11,6 +11,7 @@ namespace SpaceGame.Components
         
         private SpriteRenderer _spriteRenderer;
         private static List<Collider> _colliders = new List<Collider>();
+        private List<Collider> _otherColliders = new List<Collider>();
 
         public override void Awake()
         {
@@ -32,9 +33,18 @@ namespace SpaceGame.Components
             {
                 RectangleF intercection = RectangleF.Intersect(_spriteRenderer.Rectangle, other._spriteRenderer.Rectangle);
 
-                if (intercection.Width > 0 || intercection.Height > 0)
+                if (!_otherColliders.Contains(other))
                 {
-                    CollisionHandler?.Invoke(other);
+                    if (intercection.Width > 0 || intercection.Height > 0)
+                    {
+                        _otherColliders.Add(other);
+                        CollisionHandler?.Invoke(other);
+                    }
+                }
+                else
+                {
+                    if (intercection.Width <= 0 || intercection.Height <= 0)
+                        _otherColliders.Remove(other);
                 }
             }
         }

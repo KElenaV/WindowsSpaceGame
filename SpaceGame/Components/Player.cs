@@ -7,6 +7,7 @@ namespace SpaceGame.Components
     {
         private SpriteRenderer _spriteRenderer;
         private Animator _animator;
+        private Collider _collider;
         private Vector2 _velocity;
         private float _speed;
         private float _timer;
@@ -21,6 +22,9 @@ namespace SpaceGame.Components
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("player");
             _spriteRenderer.ScaleFactor = 0.7f;
+
+            _collider = (Collider) GameObject.GetComponent("Collider");
+            _collider.CollisionHandler += Collision;
 
             _animator = (Animator)GameObject.GetComponent("Animator");
             _animator.AddAnimation(new Animation("PlayerFly", 10));
@@ -71,6 +75,17 @@ namespace SpaceGame.Components
                 }
             
             _velocity = Vector2.Normalize(_velocity);
+        }
+
+        private void Collision(Collider other)
+        {
+            if (other.GameObject.Tag == "Enemy")
+            {
+                if(GameManager.LifeCount > 0)
+                {
+                    GameManager.RemoveLife();
+                }
+            }
         }
 
         private void Move()

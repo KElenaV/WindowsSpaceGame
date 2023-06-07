@@ -136,8 +136,6 @@ namespace SpaceGame
             {
                 GameManager.AddLife();
             }
-
-            
         }
     }
 }
