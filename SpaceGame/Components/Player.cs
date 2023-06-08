@@ -25,14 +25,12 @@ namespace SpaceGame.Components
 
             _collider = (Collider) GameObject.GetComponent("Collider");
             _collider.CollisionHandler += Collision;
+            
+            Reset();
 
             _animator = (Animator)GameObject.GetComponent("Animator");
             _animator.AddAnimation(new Animation("PlayerFly", 10));
             _animator.PlayAnimation("PlayerFly");
-
-            GameObject.Transform.Position =
-                new Vector2(GameWorld.WorldSize.Width / 2.0f - _spriteRenderer.Rectangle.Width / 2,
-                    GameWorld.WorldSize.Height - _spriteRenderer.Rectangle.Height);
         }
 
         public override void Update()
@@ -81,17 +79,18 @@ namespace SpaceGame.Components
         {
             if (other.GameObject.Tag == "Enemy")
             {
-                if(GameManager.LifeCount > 0)
-                {
-                    GameManager.RemoveLife();
-                }
+                GameManager.RemoveLife();
+
+                if (GameManager.LifeCount > 0)
+                    Reset();
+                else
+                    Remove();
+
             }
         }
 
-        private void Move()
-        {
+        private void Move() => 
             GameObject.Transform.Translate(_velocity * _speed * Time.DeltaTime);
-        }
 
         private void ScreenLimits()
         {
@@ -106,7 +105,7 @@ namespace SpaceGame.Components
         private void VerticalLimits(float xPosition, float yPosition)
         {
             float minPositionY = 20;
-            float maxPositionY = GameWorld.WorldSize.Height - _spriteRenderer.Sprite.Height;
+            float maxPositionY = GameWorld.WorldSize.Height - _spriteRenderer.Rectangle.Height;
             
             if(yPosition < minPositionY)
                 GameObject.Transform.Position = new Vector2(xPosition, minPositionY);
@@ -116,7 +115,7 @@ namespace SpaceGame.Components
 
         private void HorizontalLimits(float xPosition, float yPosition)
         {
-            float minPositionX = -_spriteRenderer.Sprite.Width;
+            float minPositionX = -_spriteRenderer.Rectangle.Width;
             float maxPositionX = GameWorld.WorldSize.Width;
             
             if(xPosition < minPositionX)
@@ -133,6 +132,29 @@ namespace SpaceGame.Components
             Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 4, GameObject.Transform.Position.Y - 20);
             laser.AddComponent(new Laser("laser", new Vector2(0,-1), laserPosition));
             GameWorld.Instantiate(laser);
+        }
+
+        private void Reset()
+        {
+            GameObject.Transform.Position =
+                new Vector2(GameWorld.WorldSize.Width / 2.0f - _spriteRenderer.Rectangle.Width / 2,
+                    GameWorld.WorldSize.Height - _spriteRenderer.Rectangle.Height);
+        }
+
+        private void Remove()
+        {
+            Explode();
+            GameObject.Destroy();
+        }
+
+        private void Explode()
+        {
+            GameObject explosion = new GameObject();
+            explosion.AddComponent(new SpriteRenderer());
+            explosion.AddComponent(new Animator());
+            explosion.AddComponent(new Explosion(GameObject.Transform.Position));
+            
+            GameWorld.Instantiate(explosion);
         }
     }
 }
