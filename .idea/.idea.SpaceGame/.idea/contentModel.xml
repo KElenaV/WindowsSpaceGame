@@ -42,6 +42,7 @@
           <e p="BG1.png" t="Include" />
           <e p="BG2.png" t="Include" />
           <e p="BG3.png" t="Include" />
+          <e p="Button.png" t="Include" />
           <e p="enemy_01.png" t="Include" />
           <e p="EnemyFly" t="Include">
             <e p="enemy_01_00.png" t="Include" />
@@ -69,6 +70,7 @@
             <e p="Explosion0015.png" t="Include" />
             <e p="Explosion0016.png" t="Include" />
           </e>
+          <e p="GameOver.png" t="Include" />
           <e p="laser.png" t="Include" />
           <e p="planet.png" t="Include" />
           <e p="player.png" t="Include" />

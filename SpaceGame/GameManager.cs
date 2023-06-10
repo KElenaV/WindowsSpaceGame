@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Numerics;
+using System.Windows.Forms;
 using SpaceGame.Components;
 
 namespace SpaceGame
@@ -9,10 +10,17 @@ namespace SpaceGame
         private static float _xOffset = 5;
         private static float _yOffset = 5;
         private static GameObject _currentLife;
+        private static Button _restartButton;
         
         public static List<GameObject> UIElements { get; set; } = new List<GameObject>();
         private static List<GameObject> _lives = new List<GameObject>(); 
         public static int LifeCount { get; private set; }
+
+        public static void Initialize(Button button)
+        {
+            _restartButton = button;
+            _restartButton.Hide();
+        }
 
         public static void AddLife()
         {
@@ -44,8 +52,22 @@ namespace SpaceGame
                 _currentLife = _lives[LifeCount-1];
             else
             {
-                //Todo: game over
+                GameOver();
             }
+        }
+
+        private static void GameOver()
+        {
+            GameObject gameOver = new GameObject();
+
+            SpriteRenderer spriteRenderer = new SpriteRenderer();
+            spriteRenderer.SetSprite("GameOver");
+
+            gameOver.AddComponent(spriteRenderer);
+
+            UIElements.Add(gameOver);
+
+            _restartButton.Show();
         }
     }
 }

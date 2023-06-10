@@ -62,3 +62,5 @@ D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Explo
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Explosion\Explosion0014.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Explosion\Explosion0015.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Explosion\Explosion0016.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Button.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\GameOver.png

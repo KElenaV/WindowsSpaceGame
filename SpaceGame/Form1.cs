@@ -11,6 +11,7 @@ namespace SpaceGame
         {
             InitializeComponent();
             SetClientSizeCore(1024, 768);
+            GameManager.Initialize(restartButton);
             _gameWorld = new GameWorld(DisplayRectangle, CreateGraphics());
         }
 
@@ -19,6 +20,11 @@ namespace SpaceGame
         private void GameLoop_Tick(object sender, EventArgs e)
         {
             _gameWorld.Update();
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
