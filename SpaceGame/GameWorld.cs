@@ -25,7 +25,7 @@ namespace SpaceGame
         public static Graphics Graphics { get; private set; }
         public static bool Debug { get; set; } = false;
 
-        private void Initialize()
+        public void Initialize()
         {
             CreateGameObjects();
             
@@ -87,6 +87,9 @@ namespace SpaceGame
 
         private void CreateGameObjects()
         {
+            _gameObjects.Clear();
+            GameManager.Reset();
+
             GameObject background1 = new GameObject();
             GameObject background2 = new GameObject();
             GameObject background3 = new GameObject();

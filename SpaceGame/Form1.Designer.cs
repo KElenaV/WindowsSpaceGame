@@ -30,6 +30,7 @@ namespace SpaceGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.GameLoop = new System.Windows.Forms.Timer(this.components);
             this.restartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -42,23 +43,32 @@ namespace SpaceGame
             // 
             // restartButton
             // 
-            this.restartButton.Location = new System.Drawing.Point(900, 1000);
+            this.restartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(65)))));
+            this.restartButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("restartButton.BackgroundImage")));
+            this.restartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.restartButton.FlatAppearance.BorderSize = 0;
+            this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.restartButton.Font = new System.Drawing.Font("MV Boli", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.restartButton.Location = new System.Drawing.Point(780, 948);
             this.restartButton.Name = "restartButton";
-            this.restartButton.Size = new System.Drawing.Size(250, 50);
+            this.restartButton.Size = new System.Drawing.Size(400, 150);
             this.restartButton.TabIndex = 0;
             this.restartButton.Text = "RESTART";
-            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.UseVisualStyleBackColor = false;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 697);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(65)))));
+            this.ClientSize = new System.Drawing.Size(1398, 1153);
             this.Controls.Add(this.restartButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+
         }
 
         #endregion

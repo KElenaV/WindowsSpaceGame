@@ -24,7 +24,7 @@ namespace SpaceGame
 
         private void restartButton_Click(object sender, EventArgs e)
         {
-
+            _gameWorld.Initialize();
         }
     }
 }

@@ -24,16 +24,16 @@
         <option value="$PROJECT_DIR$/SpaceGame/Components/Enemy.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/GameObject.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Laser.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/Form1.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/SpriteRenderer.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Background.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/BackgroundElement.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Animation.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Animator.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/GameWorld.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Collider.cs" />
-        <option value="$PROJECT_DIR$/SpaceGame/GameManager.cs" />
         <option value="$PROJECT_DIR$/SpaceGame/Components/Player.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/Form1.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameWorld.cs" />
+        <option value="$PROJECT_DIR$/SpaceGame/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +95,7 @@
       <workItem from="1686246972261" duration="1819000" />
       <workItem from="1686374457571" duration="133000" />
       <workItem from="1686377616694" duration="414000" />
+      <workItem from="1686537615785" duration="4145000" />
     </task>
     <servers />
   </component>
@@ -102,22 +103,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1458" height="731" key="GridCell.Tab.0.bottom" timestamp="1686378033826">
+    <state width="1458" height="728" key="GridCell.Tab.0.bottom" timestamp="1686541799742">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1458" height="731" key="GridCell.Tab.0.bottom/0.0.1500.952@0.0.1500.952" timestamp="1686378033826" />
-    <state width="1458" height="731" key="GridCell.Tab.0.center" timestamp="1686378033826">
+    <state width="1458" height="728" key="GridCell.Tab.0.bottom/0.0.1500.952@0.0.1500.952" timestamp="1686541799742" />
+    <state width="1458" height="728" key="GridCell.Tab.0.center" timestamp="1686541799742">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1458" height="731" key="GridCell.Tab.0.center/0.0.1500.952@0.0.1500.952" timestamp="1686378033826" />
-    <state width="1458" height="731" key="GridCell.Tab.0.left" timestamp="1686378033826">
+    <state width="1458" height="728" key="GridCell.Tab.0.center/0.0.1500.952@0.0.1500.952" timestamp="1686541799742" />
+    <state width="1458" height="728" key="GridCell.Tab.0.left" timestamp="1686541799742">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1458" height="731" key="GridCell.Tab.0.left/0.0.1500.952@0.0.1500.952" timestamp="1686378033826" />
-    <state width="1458" height="731" key="GridCell.Tab.0.right" timestamp="1686378033826">
+    <state width="1458" height="728" key="GridCell.Tab.0.left/0.0.1500.952@0.0.1500.952" timestamp="1686541799742" />
+    <state width="1458" height="728" key="GridCell.Tab.0.right" timestamp="1686541799742">
       <screen x="0" y="0" width="1500" height="952" />
     </state>
-    <state width="1458" height="731" key="GridCell.Tab.0.right/0.0.1500.952@0.0.1500.952" timestamp="1686378033826" />
+    <state width="1458" height="728" key="GridCell.Tab.0.right/0.0.1500.952@0.0.1500.952" timestamp="1686541799742" />
     <state width="1344" height="321" key="GridCell.Tab.1.bottom" timestamp="1685665994322">
       <screen x="0" y="0" width="1500" height="952" />
     </state>

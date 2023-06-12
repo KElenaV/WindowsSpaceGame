@@ -85,7 +85,6 @@ namespace SpaceGame.Components
                     Reset();
                 else
                     Remove();
-
             }
         }
 

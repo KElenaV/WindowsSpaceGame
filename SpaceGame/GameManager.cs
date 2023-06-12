@@ -5,21 +5,24 @@ using SpaceGame.Components;
 
 namespace SpaceGame
 {
+    public delegate void OnGameOver();
+
     public static class GameManager
     {
         private static float _xOffset = 5;
         private static float _yOffset = 5;
         private static GameObject _currentLife;
         private static Button _restartButton;
+        private static GameObject _gameOver;
         
         public static List<GameObject> UIElements { get; set; } = new List<GameObject>();
         private static List<GameObject> _lives = new List<GameObject>(); 
         public static int LifeCount { get; private set; }
+        public static OnGameOver GameOverHandler;
 
         public static void Initialize(Button button)
         {
             _restartButton = button;
-            _restartButton.Hide();
         }
 
         public static void AddLife()
@@ -46,7 +49,7 @@ namespace SpaceGame
             UIElements.Remove(_currentLife);
 
             LifeCount--;
-            //_xOffset -= 5;
+            _xOffset -= 5;
 
             if(LifeCount > 0)
                 _currentLife = _lives[LifeCount-1];
@@ -58,16 +61,27 @@ namespace SpaceGame
 
         private static void GameOver()
         {
-            GameObject gameOver = new GameObject();
+            GameOverHandler?.Invoke();
+
+            _gameOver = new GameObject();
 
             SpriteRenderer spriteRenderer = new SpriteRenderer();
             spriteRenderer.SetSprite("GameOver");
 
-            gameOver.AddComponent(spriteRenderer);
+            _gameOver.AddComponent(spriteRenderer);
 
-            UIElements.Add(gameOver);
+            UIElements.Add(_gameOver);
 
             _restartButton.Show();
+        }
+
+        public static void Reset()
+        {
+            _restartButton.Hide();
+            UIElements.Clear();
+            _lives.Clear();
+            LifeCount = 0;
+            _xOffset = 5;
         }
     }
 }

@@ -14,6 +14,8 @@ namespace SpaceGame.Components
 
         public override void Awake()
         {
+            GameManager.GameOverHandler += OnGameOver;
+
             GameObject.Tag = ToString();
             
             _speed = 100;
@@ -78,6 +80,11 @@ namespace SpaceGame.Components
             explosion.AddComponent(new Explosion(GameObject.Transform.Position));
 
             GameWorld.Instantiate(explosion);
+        }
+
+        private void OnGameOver()
+        {
+            GameObject.Destroy();
         }
     }
 }
