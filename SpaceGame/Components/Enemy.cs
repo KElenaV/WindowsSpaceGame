@@ -49,6 +49,7 @@ namespace SpaceGame.Components
         {
             if (other.GameObject.Tag == "Laser")
             {
+                GameManager.AddPoint();
                 other.GameObject.Destroy();
                 Explode();
                 Respawn();

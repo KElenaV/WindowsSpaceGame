@@ -11,7 +11,7 @@ namespace SpaceGame
         {
             InitializeComponent();
             SetClientSizeCore(1024, 768);
-            GameManager.Initialize(restartButton);
+            GameManager.Initialize(restartButton, labelScore);
             _gameWorld = new GameWorld(DisplayRectangle, CreateGraphics());
         }
 

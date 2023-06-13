@@ -14,15 +14,24 @@ namespace SpaceGame
         private static GameObject _currentLife;
         private static Button _restartButton;
         private static GameObject _gameOver;
+        private static int _score;
+        private static Label _scoreLabel;
         
         public static List<GameObject> UIElements { get; set; } = new List<GameObject>();
         private static List<GameObject> _lives = new List<GameObject>(); 
         public static int LifeCount { get; private set; }
         public static OnGameOver GameOverHandler;
 
-        public static void Initialize(Button button)
+        public static void Initialize(Button button, Label scoreLabel)
         {
             _restartButton = button;
+            _scoreLabel = scoreLabel;
+        }
+
+        public static void AddPoint()
+        {
+            _score++;
+            ShowScore();
         }
 
         public static void AddLife()
@@ -82,6 +91,13 @@ namespace SpaceGame
             _lives.Clear();
             LifeCount = 0;
             _xOffset = 5;
+            _score = 0;
+            ShowScore();
+        }
+
+        private static void ShowScore()
+        {
+            _scoreLabel.Text = $"Score: {_score}";
         }
     }
 }
