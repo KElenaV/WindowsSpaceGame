@@ -155,5 +155,15 @@ namespace SpaceGame.Components
             
             GameWorld.Instantiate(explosion);
         }
+
+        public void ApplyShield()
+        {
+            GameObject shield = new GameObject();
+            shield.AddComponent(new Shield(GameObject.Transform, new Vector2(-35, -35)));
+            shield.AddComponent(new SpriteRenderer(3));
+            shield.AddComponent(new Collider());
+
+            GameWorld.Instantiate(shield);
+        }
     }
 }

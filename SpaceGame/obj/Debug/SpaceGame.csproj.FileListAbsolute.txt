@@ -65,3 +65,4 @@ D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Explo
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\Button.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\GameOver.png
 D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\supplyCrate.png
+D:\Lena\UnityProjects\GitRepo\WindowsSpaceGame\SpaceGame\bin\Debug\Sprites\shield.png
