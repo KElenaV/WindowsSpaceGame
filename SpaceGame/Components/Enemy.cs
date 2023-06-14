@@ -52,6 +52,7 @@ namespace SpaceGame.Components
                 GameManager.AddPoint();
                 other.GameObject.Destroy();
                 Explode();
+                CreateSupplyCrate();
                 Respawn();
             }
         }
@@ -76,11 +77,21 @@ namespace SpaceGame.Components
         private void Explode()
         {
             GameObject explosion = new GameObject();
-            explosion.AddComponent(new SpriteRenderer());
+            explosion.AddComponent(new SpriteRenderer(3));
             explosion.AddComponent(new Animator());
             explosion.AddComponent(new Explosion(GameObject.Transform.Position));
 
             GameWorld.Instantiate(explosion);
+        }
+
+        private void CreateSupplyCrate()
+        {
+            GameObject supplyCrate = new GameObject();
+            supplyCrate.AddComponent(new SpriteRenderer());
+            supplyCrate.AddComponent(new Collider());
+            supplyCrate.AddComponent(new SupplyCrate(GameObject.Transform.Position));
+
+            GameWorld.Instantiate(supplyCrate);
         }
 
         private void OnGameOver()
