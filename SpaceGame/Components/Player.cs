@@ -14,19 +14,25 @@ namespace SpaceGame.Components
         private float _timer;
         private float _timeBetweenShoot = 1f;
 
+        private bool _isImmortal = false;
+        private float _immortalDuration = 3f;
+        private float _immortalTimer;
+        private float _blinkDuration = 0.2f;
+        private float _blinkTimer;
+
         public override void Awake()
         {
             GameObject.Tag = ToString();
-            
+
             _speed = 100;
 
             _spriteRenderer = (SpriteRenderer)GameObject.GetComponent("SpriteRenderer");
             _spriteRenderer.SetSprite("player");
             _spriteRenderer.ScaleFactor = 0.7f;
 
-            _collider = (Collider) GameObject.GetComponent("Collider");
+            _collider = (Collider)GameObject.GetComponent("Collider");
             _collider.CollisionHandler += Collision;
-            
+
             Reset();
 
             _animator = (Animator)GameObject.GetComponent("Animator");
@@ -37,17 +43,29 @@ namespace SpaceGame.Components
         public override void Update()
         {
             _timer += Time.DeltaTime;
-            
+
             GetInput();
 
             Move();
-            
+
             ScreenLimits();
+
+            Immortality();
         }
 
         public override string ToString()
         {
             return "Player";
+        }
+
+        public void ApplyShield()
+        {
+            _shield = new GameObject();
+            _shield.AddComponent(new Shield(GameObject.Transform, new Vector2(-35, -35)));
+            _shield.AddComponent(new SpriteRenderer(3));
+            _shield.AddComponent(new Collider());
+
+            GameWorld.Instantiate(_shield);
         }
 
         private void GetInput()
@@ -66,39 +84,41 @@ namespace SpaceGame.Components
             if (Keyboard.IsKeyDown(Keys.D))
                 _velocity += new Vector2(1, 0);
 
-            if(Keyboard.IsKeyDown(Keys.Space))
+            if (Keyboard.IsKeyDown(Keys.Space))
                 if (_timer >= _timeBetweenShoot)
                 {
                     _timer = 0;
                     Shoot();
                 }
-            
+
             _velocity = Vector2.Normalize(_velocity);
         }
 
         private void Collision(Collider other)
         {
-            if (other.GameObject.Tag == "Enemy")
+            if (other.GameObject.Tag == "Enemy" && !_isImmortal)
             {
-                    GameManager.RemoveLife();
+                _isImmortal = true;
 
-                    if (GameManager.LifeCount > 0)
-                        Reset();
-                    else
-                        Remove();
+                GameManager.RemoveLife();
+
+                if (GameManager.LifeCount > 0)
+                    Reset();
+                else
+                    Remove();
             }
         }
 
-        private void Move() => 
+        private void Move() =>
             GameObject.Transform.Translate(_velocity * _speed * Time.DeltaTime);
 
         private void ScreenLimits()
         {
             float xPosition = GameObject.Transform.Position.X;
             float yPosition = GameObject.Transform.Position.Y;
-            
+
             VerticalLimits(xPosition, yPosition);
-            
+
             HorizontalLimits(xPosition, yPosition);
         }
 
@@ -106,10 +126,10 @@ namespace SpaceGame.Components
         {
             float minPositionY = 20;
             float maxPositionY = GameWorld.WorldSize.Height - _spriteRenderer.Rectangle.Height;
-            
-            if(yPosition < minPositionY)
+
+            if (yPosition < minPositionY)
                 GameObject.Transform.Position = new Vector2(xPosition, minPositionY);
-            if (yPosition > maxPositionY) 
+            if (yPosition > maxPositionY)
                 GameObject.Transform.Position = new Vector2(xPosition, maxPositionY);
         }
 
@@ -117,10 +137,10 @@ namespace SpaceGame.Components
         {
             float minPositionX = -_spriteRenderer.Rectangle.Width;
             float maxPositionX = GameWorld.WorldSize.Width;
-            
-            if(xPosition < minPositionX)
+
+            if (xPosition < minPositionX)
                 GameObject.Transform.Position = new Vector2(maxPositionX, yPosition);
-            if(xPosition > maxPositionX)
+            if (xPosition > maxPositionX)
                 GameObject.Transform.Position = new Vector2(minPositionX, yPosition);
         }
 
@@ -129,8 +149,8 @@ namespace SpaceGame.Components
             GameObject laser = new GameObject();
             laser.AddComponent(new SpriteRenderer(1));
             laser.AddComponent(new Collider());
-            Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width/2) - 4, GameObject.Transform.Position.Y - 20);
-            laser.AddComponent(new Laser("laser", new Vector2(0,-1), laserPosition));
+            Vector2 laserPosition = new Vector2(GameObject.Transform.Position.X + (_spriteRenderer.Rectangle.Width / 2) - 4, GameObject.Transform.Position.Y - 20);
+            laser.AddComponent(new Laser("laser", new Vector2(0, -1), laserPosition));
             GameWorld.Instantiate(laser);
         }
 
@@ -153,18 +173,32 @@ namespace SpaceGame.Components
             explosion.AddComponent(new SpriteRenderer());
             explosion.AddComponent(new Animator());
             explosion.AddComponent(new Explosion(GameObject.Transform.Position));
-            
+
             GameWorld.Instantiate(explosion);
         }
 
-        public void ApplyShield()
+        private void Immortality()
         {
-            _shield = new GameObject();
-            _shield.AddComponent(new Shield(GameObject.Transform, new Vector2(-35, -35)));
-            _shield.AddComponent(new SpriteRenderer(3));
-            _shield.AddComponent(new Collider());
+            if (_isImmortal)
+            {
+                _blinkTimer += Time.DeltaTime;
 
-            GameWorld.Instantiate(_shield);
+                if(_blinkTimer >= _blinkDuration)
+                {
+                    _spriteRenderer.IsEnabled = !_spriteRenderer.IsEnabled;
+                    _blinkTimer = 0;
+                }
+
+                _immortalTimer += Time.DeltaTime;
+
+                if(_immortalTimer >= _immortalDuration)
+                {
+                    _isImmortal = false;
+                    _spriteRenderer.IsEnabled = true;
+                    _blinkTimer = 0;
+                    _immortalTimer = 0;
+                }
+            }
         }
     }
 }
