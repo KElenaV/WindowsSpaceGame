@@ -6,6 +6,7 @@ namespace SpaceGame.Components
     class Player : Component
     {
         private SpriteRenderer _spriteRenderer;
+        private GameObject _shield;
         private Animator _animator;
         private Collider _collider;
         private Vector2 _velocity;
@@ -79,12 +80,12 @@ namespace SpaceGame.Components
         {
             if (other.GameObject.Tag == "Enemy")
             {
-                GameManager.RemoveLife();
+                    GameManager.RemoveLife();
 
-                if (GameManager.LifeCount > 0)
-                    Reset();
-                else
-                    Remove();
+                    if (GameManager.LifeCount > 0)
+                        Reset();
+                    else
+                        Remove();
             }
         }
 
@@ -158,12 +159,12 @@ namespace SpaceGame.Components
 
         public void ApplyShield()
         {
-            GameObject shield = new GameObject();
-            shield.AddComponent(new Shield(GameObject.Transform, new Vector2(-35, -35)));
-            shield.AddComponent(new SpriteRenderer(3));
-            shield.AddComponent(new Collider());
+            _shield = new GameObject();
+            _shield.AddComponent(new Shield(GameObject.Transform, new Vector2(-35, -35)));
+            _shield.AddComponent(new SpriteRenderer(3));
+            _shield.AddComponent(new Collider());
 
-            GameWorld.Instantiate(shield);
+            GameWorld.Instantiate(_shield);
         }
     }
 }

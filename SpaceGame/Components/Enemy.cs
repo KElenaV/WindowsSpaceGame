@@ -55,6 +55,13 @@ namespace SpaceGame.Components
                 CreateSupplyCrate();
                 Respawn();
             }
+            else if (other.GameObject.Tag == "Shield")
+            {
+                other.GameObject.Destroy();
+                Explode();
+                Respawn();
+            }
+
         }
 
         private void Move()
